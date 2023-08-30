@@ -11,11 +11,15 @@ npm install openpaylib
 ## Usage
 
 ```js
-import { multiply } from 'openpaylib';
+import * as OpenPayLib from 'openpaylib';
 
 // ...
 
-const result = await multiply(3, 7);
+OpenPayLib.initialize('MerchantID', 'PK', isProduction)
+
+OpenPayLib.getDeviceId((deviceId) => {
+    console.log("s ==> " + deviceId);
+})
 ```
 
 ## Contributing
